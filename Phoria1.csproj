@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5AAEBBD-90F2-4928-B91F-D18CD3200698}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoria1</RootNamespace>
+    <AssemblyName>Phoria1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="phoria.js-master\flower.png" />
+    <Content Include="phoria.js-master\images\texture-wall.png" />
+    <Content Include="phoria.js-master\images\texture0.png" />
+    <Content Include="phoria.js-master\images\texture1.png" />
+    <Content Include="phoria.js-master\images\texture2.png" />
+    <Content Include="phoria.js-master\images\texture3.png" />
+    <Content Include="phoria.js-master\images\texture4.png" />
+    <Content Include="phoria.js-master\images\texture5.png" />
+    <Content Include="phoria.js-master\index.html" />
+    <Content Include="phoria.js-master\scripts\dat.gui.min.js" />
+    <Content Include="phoria.js-master\scripts\gl-matrix-min.js" />
+    <Content Include="phoria.js-master\scripts\gl-matrix.js" />
+    <Content Include="phoria.js-master\scripts\phoria-entity.js" />
+    <Content Include="phoria.js-master\scripts\phoria-min.js" />
+    <Content Include="phoria.js-master\scripts\phoria-renderer.js" />
+    <Content Include="phoria.js-master\scripts\phoria-scene.js" />
+    <Content Include="phoria.js-master\scripts\phoria-util.js" />
+    <Content Include="phoria.js-master\scripts\phoria-view.js" />
+    <Content Include="phoria.js-master\test0.html" />
+    <Content Include="phoria.js-master\test0k.html" />
+    <Content Include="phoria.js-master\test0p.html" />
+    <Content Include="phoria.js-master\test0q.html" />
+    <Content Include="phoria.js-master\test0r.html" />
+    <Content Include="phoria.js-master\test0t.html" />
+    <Content Include="phoria.js-master\test0uv.html" />
+    <Content Include="phoria.js-master\test1.html" />
+    <Content Include="phoria.js-master\test1d.html" />
+    <Content Include="phoria.js-master\test1t.html" />
+    <Content Include="phoria.js-master\test2.html" />
+    <Content Include="phoria.js-master\test2i.html" />
+    <Content Include="phoria.js-master\test3.html" />
+    <Content Include="phoria.js-master\test3m.html" />
+    <Content Include="phoria.js-master\test3p.html" />
+    <Content Include="phoria.js-master\test3s.html" />
+    <Content Include="phoria.js-master\test3s_teapot.html" />
+    <Content Include="phoria.js-master\test4.html" />
+    <Content Include="phoria.js-master\test4g.html" />
+    <Content Include="phoria.js-master\CoolPointLights.html" />
+    <Content Include="phoria.js-master\test4t.html" />
+    <Content Include="phoria.js-master\test5.html" />
+    <Content Include="phoria.js-master\test6.html" />
+    <Content Include="phoria.js-master\test7.html" />
+    <Content Include="phoria.js-master\test8.html" />
+    <Content Include="phoria.js-master\fireworks.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="phoria.js-master\LICENSE" />
+    <Content Include="phoria.js-master\README.md" />
+    <Content Include="phoria.js-master\teapot.obj" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51497</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51497/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

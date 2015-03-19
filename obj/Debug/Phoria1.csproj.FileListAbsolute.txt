@@ -1,0 +1,5 @@
+c:\users\hollandd\documents\visual studio 2013\Projects\Phoria1\Phoria1\bin\Phoria1.dll.config
+c:\users\hollandd\documents\visual studio 2013\Projects\Phoria1\Phoria1\bin\Phoria1.dll
+c:\users\hollandd\documents\visual studio 2013\Projects\Phoria1\Phoria1\bin\Phoria1.pdb
+c:\users\hollandd\documents\visual studio 2013\Projects\Phoria1\Phoria1\obj\Debug\Phoria1.dll
+c:\users\hollandd\documents\visual studio 2013\Projects\Phoria1\Phoria1\obj\Debug\Phoria1.pdb

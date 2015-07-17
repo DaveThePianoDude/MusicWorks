@@ -4,13 +4,14 @@
  * @date 13th April 2013
  */
 
+/**
+ * BaseEntity is the base that other Entity prototypes extend from. Provides functions to perform chained matrix
+ * operations and maintains the child entity list. It also provides the onScene event handler functions.
+ */
+
 (function() {
    "use strict";
-   
-   /**
-    * BaseEntity is the base that other Entity prototypes extend from. Provides functions to perform chained matrix
-    * operations and maintains the child entity list. It also provides the onScene event handler functions.
-    */
+  
    Phoria.BaseEntity = function()
    {
       // the model matrix for this object - live manipulation functions below
@@ -194,15 +195,16 @@
 
 Phoria.CLIP_ARRAY_TYPE = (typeof Uint32Array !== 'undefined') ? Uint32Array : Array;
 
+/**
+ * Entity is the main Phoria 3D object class. It describes the vertices, edges, polygons and textures for a object
+ * that can be rendered within a scene. Other classes sub-class this to provide more specialised entities such as
+ * lights or Physics objects. The Entity also descibes a style structure that has a number of configuration settings
+ * for different types and modes of rendering a 3D object.
+ */
+
 (function() {
    "use strict";
 
-   /**
-    * Entity is the main Phoria 3D object class. It describes the vertices, edges, polygons and textures for a object
-    * that can be rendered within a scene. Other classes sub-class this to provide more specialised entities such as
-    * lights or Physics objects. The Entity also descibes a style structure that has a number of configuration settings
-    * for different types and modes of rendering a 3D object.
-    */
    Phoria.Entity = function()
    {
       Phoria.Entity.superclass.constructor.call(this);
@@ -520,21 +522,21 @@ Phoria.CLIP_ARRAY_TYPE = (typeof Uint32Array !== 'undefined') ? Uint32Array : Ar
 
 })();
 
+/**
+ * The PositionalAspect has defines a prototype for objects that may not be rendered directly (i.e. do not need
+ * to have a visible entity) but do represent a position in the scene.
+ * 
+ * Augment a prototype with this aspect to provide an easy way to keep track of a it's position in the scene after
+ * matrix transformations have occured. Examine worldposition at runtime (ensure not null) to get current position.
+ * 
+ * Set the initial position on object construction if the entity is not positioned at the origin by default.
+ */
 
 (function() {
    "use strict";
    
    Phoria.PositionalAspect = {};
    
-   /**
-    * The PositionalAspect has defines a prototype for objects that may not be rendered directly (i.e. do not need
-    * to have a visible entity) but do represent a position in the scene.
-    * 
-    * Augment a prototype with this aspect to provide an easy way to keep track of a it's position in the scene after
-    * matrix transformations have occured. Examine worldposition at runtime (ensure not null) to get current position.
-    * 
-    * Set the initial position on object construction if the entity is not positioned at the origin by default.
-    */
    Phoria.PositionalAspect.prototype =
    {
       // {xyz} the position of the entity
@@ -552,15 +554,15 @@ Phoria.CLIP_ARRAY_TYPE = (typeof Uint32Array !== 'undefined') ? Uint32Array : Ar
    };
 })();
 
+/**
+ * PhysicsEntity builds on the basic entity class to provide very basic physics support. The entity maintains
+ * a position and a velocity that can be manipulated via constant and impulse forces. It also optionally
+ * applies gravity. After the physics calculations the entity matrix is updated to the new position.
+ */
 
 (function() {
    "use strict";
 
-   /**
-    * PhysicsEntity builds on the basic entity class to provide very basic physics support. The entity maintains
-    * a position and a velocity that can be manipulated via constant and impulse forces. It also optionally
-    * applies gravity. After the physics calculations the entity matrix is updated to the new position.
-    */
    Phoria.PhysicsEntity = function()
    {
       Phoria.PhysicsEntity.superclass.constructor.call(this);
@@ -683,15 +685,16 @@ Phoria.CLIP_ARRAY_TYPE = (typeof Uint32Array !== 'undefined') ? Uint32Array : Ar
  */
 Phoria.PhysicsEntity.GRAVITY = {x:0, y:-9.8, z:0};
 
+/**
+ * Emitter is used to generate "particle" physics entities at a given rate per second with a flexible configuration
+ * of velocity and position starting point. The emitter itself is not rendered, but exposes a style config that is
+ * applied to all child particle entities. An event handler 'onParticle' is provided to allow further customisation
+ * of particles as they are generated.
+ */
+
 (function() {
    "use strict";
 
-   /**
-    * Emitter is used to generate "particle" physics entities at a given rate per second with a flexible configuration
-    * of velocity and position starting point. The emitter itself is not rendered, but exposes a style config that is
-    * applied to all child particle entities. An event handler 'onParticle' is provided to allow further customisation
-    * of particles as they are generated.
-    */
    Phoria.EmitterEntity = function()
    {
       Phoria.EmitterEntity.superclass.constructor.call(this);
@@ -700,7 +703,7 @@ Phoria.PhysicsEntity.GRAVITY = {x:0, y:-9.8, z:0};
       this.positionRnd = {x:0,y:0,z:0};
       this.velocity = {x:0,y:1,z:0};
       this.velocityRnd = {x:0,y:0,z:0};
-      this.maximum = 1000;
+      this.maximum = 100;
       this.gravity = true;
       
       // default particle rendering style
@@ -873,13 +876,13 @@ Phoria.PhysicsEntity.GRAVITY = {x:0, y:-9.8, z:0};
    Phoria.Util.augment(Phoria.EmitterEntity, Phoria.PositionalAspect);
 })();
 
+/**
+ * BaseLight is the base that the Light classes extend from. Provides RGB color and light intensity properties.
+ */
 
 (function() {
    "use strict";
 
-   /**
-    * BaseLight is the base that the Light classes extend from. Provides RGB color and light intensity properties.
-    */
    Phoria.BaseLight = function()
    {
       Phoria.BaseLight.superclass.constructor.call(this);
@@ -899,13 +902,13 @@ Phoria.PhysicsEntity.GRAVITY = {x:0, y:-9.8, z:0};
    });
 })();
 
+/**
+ * DistantLight models an infinitely distant light that has no position only a normalised direction from which light eminates.
+ */
 
 (function() {
    "use strict";
 
-   /**
-    * DistantLight models an infinitely distant light that has no position only a normalised direction from which light eminates.
-    */
    Phoria.DistantLight = function()
    {
       Phoria.DistantLight.superclass.constructor.call(this);
@@ -949,16 +952,16 @@ Phoria.PhysicsEntity.GRAVITY = {x:0, y:-9.8, z:0};
    });
 })();
 
+/**
+ * PointLight models a light that has a position within the scene and from which light eminates in all directions
+ * equally. These lights also have an attenuation which describes how the light falls off over distance. A number of
+ * attentuation types are provided such as none (no fall-off over distance), linear (fall-off directly related to the
+ * distance from the light) and squared (fall-off related to distance squared).
+ */
 
 (function() {
    "use strict";
 
-   /**
-    * PointLight models a light that has a position within the scene and from which light eminates in all directions
-    * equally. These lights also have an attenuation which describes how the light falls off over distance. A number of
-    * attentuation types are provided such as none (no fall-off over distance), linear (fall-off directly related to the
-    * distance from the light) and squared (fall-off related to distance squared).
-    */
    Phoria.PointLight = function()
    {
       Phoria.PointLight.superclass.constructor.call(this);

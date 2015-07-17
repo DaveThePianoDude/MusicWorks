@@ -57,6 +57,49 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="euphony-master\.gitignore" />
+    <Content Include="euphony-master\build\application.css" />
+    <Content Include="euphony-master\build\application.js" />
+    <Content Include="euphony-master\css\font-awesome.css" />
+    <Content Include="euphony-master\css\nanoscroller.css" />
+    <Content Include="euphony-master\css\style.css" />
+    <Content Include="euphony-master\debug.html" />
+    <Content Include="euphony-master\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="euphony-master\index.html" />
+    <Content Include="euphony-master\lib\async.min.js" />
+    <Content Include="euphony-master\lib\Detector.js" />
+    <Content Include="euphony-master\lib\jquery-1.7.1.min.js" />
+    <Content Include="euphony-master\lib\jquery.easing.js" />
+    <Content Include="euphony-master\lib\jquery.nanoscroller.min.js" />
+    <Content Include="euphony-master\lib\MIDI.js\Color.js" />
+    <Content Include="euphony-master\lib\MIDI.js\DOMLoader.script.js" />
+    <Content Include="euphony-master\lib\MIDI.js\DOMLoader.XMLHttp.js" />
+    <Content Include="euphony-master\lib\MIDI.js\lib\base64binary.js" />
+    <Content Include="euphony-master\lib\MIDI.js\lib\jasmid\midifile.js" />
+    <Content Include="euphony-master\lib\MIDI.js\lib\jasmid\replayer.js" />
+    <Content Include="euphony-master\lib\MIDI.js\lib\jasmid\stream.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MIDI.audioDetect.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MIDI.loadPlugin.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MIDI.Player.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MIDI.Plugin.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MusicTheory.js" />
+    <Content Include="euphony-master\lib\MIDI.js\MusicTheory.Synesthesia.js" />
+    <Content Include="euphony-master\lib\MIDI.js\VersionControl.Base64.js" />
+    <Content Include="euphony-master\lib\OrbitControls.js" />
+    <Content Include="euphony-master\lib\spin.min.js" />
+    <Content Include="euphony-master\lib\state-machine.min.js" />
+    <Content Include="euphony-master\lib\Three.js" />
+    <Content Include="euphony-master\notsupported.html" />
+    <Content Include="euphony-master\soundfont\soundfont-mp3.js" />
+    <Content Include="euphony-master\soundfont\soundfont-ogg.js" />
+    <Content Include="euphony-master\src\compiled\Euphony.js" />
+    <Content Include="euphony-master\src\compiled\LoaderWidget.js" />
+    <Content Include="euphony-master\src\compiled\Main.js" />
+    <Content Include="euphony-master\src\compiled\NoteParticles.js" />
+    <Content Include="euphony-master\src\compiled\NoteRain.js" />
+    <Content Include="euphony-master\src\compiled\PianoKeyboard.js" />
+    <Content Include="euphony-master\src\compiled\PlayerWidget.js" />
+    <Content Include="euphony-master\src\compiled\Scene.js" />
     <Content Include="phoria.js-master\flower.png" />
     <Content Include="phoria.js-master\images\texture-wall.png" />
     <Content Include="phoria.js-master\images\texture0.png" />
@@ -94,14 +137,16 @@
     <Content Include="phoria.js-master\test3s_teapot.html" />
     <Content Include="phoria.js-master\test4.html" />
     <Content Include="phoria.js-master\test4g.html" />
-    <Content Include="phoria.js-master\CoolPointLights.html" />
+    <Content Include="phoria.js-master\test4p.html" />
     <Content Include="phoria.js-master\test4t.html" />
     <Content Include="phoria.js-master\test5.html" />
     <Content Include="phoria.js-master\test6.html" />
     <Content Include="phoria.js-master\test7.html" />
     <Content Include="phoria.js-master\test8.html" />
     <Content Include="phoria.js-master\fireworks.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,13 +155,34 @@
     <Content Include="phoria.js-master\LICENSE" />
     <Content Include="phoria.js-master\README.md" />
     <Content Include="phoria.js-master\teapot.obj" />
+    <Content Include="phoria.js-master\clamp.obj" />
+    <Content Include="euphony-master\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="euphony-master\css\fonts\fontawesome-webfont.svgz" />
+    <Content Include="euphony-master\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="euphony-master\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="euphony-master\lib\MIDI.js\lib\jasmid\LICENSE" />
+    <Content Include="euphony-master\Makefile" />
+    <Content Include="euphony-master\README.md" />
+    <Content Include="euphony-master\src\coffee\Euphony.coffee" />
+    <Content Include="euphony-master\src\coffee\LoaderWidget.coffee" />
+    <Content Include="euphony-master\src\coffee\Main.coffee" />
+    <Content Include="euphony-master\src\coffee\NoteParticles.coffee" />
+    <Content Include="euphony-master\src\coffee\NoteRain.coffee" />
+    <Content Include="euphony-master\src\coffee\PianoKeyboard.coffee" />
+    <Content Include="euphony-master\src\coffee\PlayerWidget.coffee" />
+    <Content Include="euphony-master\src\coffee\Scene.coffee" />
+    <Content Include="euphony-master\tracks\index.json" />
+    <Content Include="euphony-master\tracks\File1" />
+    <Content Include="euphony-master\tracks\File2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
